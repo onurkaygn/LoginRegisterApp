@@ -18,14 +18,14 @@ namespace LoginRegisterAppBackend.Controllers
         }
 
         [HttpPost("register")]
-        public ActionResult<User> Register(UserDto request)
+        public async Task<ActionResult<User>> Register(UserDto request)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
             using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                connection.ExecuteAsync("SP_CreateUser", 
+                await connection.ExecuteAsync("SP_CreateUser", 
                     new {
                         Username = request.Username,
                         PasswordHash = passwordHash
