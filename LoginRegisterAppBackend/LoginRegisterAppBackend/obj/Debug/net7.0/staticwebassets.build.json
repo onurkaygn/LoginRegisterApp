@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "y1JEF7btJZTPslNT1bpfT7EIG9hiECkM6xwDXpVYKKY=",
+  "Source": "LoginRegisterAppBackend",
+  "BasePath": "_content/LoginRegisterAppBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
